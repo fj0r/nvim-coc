@@ -32,6 +32,5 @@ cwd=<root>
 output=terminal
 
 [hello]
-command="echo 'hello world'"
-output=terminal
-cwd=$(VIM_ROOT)
+command=echo hello $(?your name), you are a $(?gender).
+
