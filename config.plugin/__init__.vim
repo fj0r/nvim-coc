@@ -62,6 +62,7 @@ if s:coc_available
         \ 'coc-git',
 		\ 'coc-calc',
 		\ 'coc-bookmark',
+        \ 'coc-tasks',
         \ 'coc-vimlsp',
         \ 'coc-emmet',
         \ 'coc-json',
