@@ -17,6 +17,7 @@ Plug 'niklaas/lightline-gitdiff'
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'skywind3000/vim-terminal-help'
+"Plug 'kassio/neoterm'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
