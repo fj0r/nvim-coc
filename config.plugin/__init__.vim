@@ -2,9 +2,6 @@
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 " Make sure you use single quotes
-if executable('node')
-    let s:coc_available = 1
-endif
 "
 call plug#begin(g:nvim_home . '/plugged')
 
@@ -49,39 +46,7 @@ Plug 'puremourning/vimspector'
 
 Plug 'johngrib/vim-game-snake'
 
-if s:coc_available
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-endif
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-if s:coc_available
-  let g:coc_data_home = resolve(expand(g:nvim_home.'/coc-data'))
-  let g:coc_global_extensions = [
-        \ 'coc-sh',
-        \ 'coc-explorer',
-        \ 'coc-snippets',
-        \ 'coc-git',
-		\ 'coc-calc',
-		\ 'coc-bookmark',
-        \ 'coc-vimlsp',
-        \ 'coc-emmet',
-        \ 'coc-json',
-        \ 'coc-yaml',
-        \ 'coc-tsserver',
-        \ 'coc-html',
-        \ 'coc-css',
-        \ 'coc-vetur',
-        \ 'coc-reason',
-        \ 'coc-pyright',
-        \ 'coc-go',
-        \ 'coc-sql',
-        \ 'coc-rust-analyzer',
-        \ 'coc-metals',
-        \]
-
-  let s:coc_conf_files = split(globpath(resolve(expand(g:nvim_home.'/config.coc')), '*.vim'), '\n')
-  for fpath in s:coc_conf_files
-    exe 'source' fpath
-  endfor
-endif
