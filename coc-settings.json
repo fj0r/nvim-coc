@@ -1,0 +1,87 @@
+{
+    "languageserver": {
+        "haskell": {
+            "command": "haskell-language-server-wrapper",
+            "args": [
+                "--lsp"
+            ],
+            "rootPatterns": [
+                "*.cabal",
+                "stack.yaml",
+                "cabal.project",
+                "package.yaml",
+                "hie.yaml"
+            ],
+            "filetypes": [
+                "haskell",
+                "lhaskell"
+            ]
+        },
+        "sql": {
+            "command": "sql-language-server",
+            "args": [
+                "up",
+                "--method",
+                "stdio"
+            ],
+            "filetypes": [
+                "sql"
+            ],
+            "settings": {
+                "sqlLanguageServer": {
+                    "connections": [
+                        {
+                            "name": "postgres-project",
+                            "adapter": "postgres",
+                            "host": "localhost",
+                            "port": 5432,
+                            "user": "postgres",
+                            "password": "sqlls",
+                            "database": "pg_test",
+                            "ssh": {
+                                "user": "ubuntu",
+                                "remoteHost": "ec2-xxx-",
+                                "dbHost": "127.0.0.1",
+                                "port": 5432,
+                                "identityFile": "~/.ssh/id_rsa",
+                                "passphrase": "123456"
+                            }
+                        },
+                        {
+                            "name": "mysql_project",
+                            "adapter": "mysql",
+                            "host": "127.0.0.1",
+                            "port": 3306,
+                            "user": "sqlls",
+                            "password": "sqlls",
+                            "database": "mysql_db",
+                            "projectPaths": [
+                                "/Users/joe_re/src/MysqlProject"
+                            ],
+                            "ssh": {
+                                "user": "ubuntu",
+                                "remoteHost": "xxx-xx-xx",
+                                "dbHost": "127.0.0.1",
+                                "port": 3306
+                            }
+                        }
+                    ],
+                    "lint": {
+                        "rules": {
+                            "align-column-to-the-first": "error",
+                            "column-new-line": "error",
+                            "linebreak-after-clause-keyword": "off",
+                            "reserved-word-case": [
+                                "error",
+                                "upper"
+                            ],
+                            "space-surrounding-operators": "error",
+                            "where-clause-new-line": "error",
+                            "align-where-clause-to-the-first": "error"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

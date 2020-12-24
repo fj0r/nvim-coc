@@ -1,25 +1,26 @@
 let g:coc_data_home = resolve(expand(g:nvim_home.'/coc-data'))
+let g:coc_user_config = {
+  \ }
 let g:coc_global_extensions = [
       \ 'coc-explorer',
       \ 'coc-bookmark',
       \ 'coc-calc',
-      \ 'coc-css',
       \ 'coc-docker',
-      \ 'coc-emmet',
       \ 'coc-git',
       \ 'coc-go',
-      \ 'coc-html',
       \ 'coc-json',
-      \ 'coc-metals',
       \ 'coc-pyright',
-      \ 'coc-reason',
       \ 'coc-rust-analyzer',
       \ 'coc-sh',
       \ 'coc-snippets',
       \ 'coc-sql',
       \ 'coc-task',
       \ 'coc-tsserver',
-      \ 'coc-vetur',
       \ 'coc-vimlsp',
+      \ 'coc-metals',
       \ 'coc-yaml',
+      \ 'coc-emmet',
+      \ 'coc-css',
+      \ 'coc-html',
+      \ 'coc-vetur',
       \]
