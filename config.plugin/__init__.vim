@@ -42,7 +42,10 @@ else
   Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension'  }
 endif
 
-Plug 'puremourning/vimspector'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+
+"Plug 'puremourning/vimspector'
 
 Plug 'johngrib/vim-game-snake'
 

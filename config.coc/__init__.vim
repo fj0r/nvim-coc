@@ -13,7 +13,7 @@ let g:coc_global_extensions = [
       \ 'coc-rust-analyzer',
       \ 'coc-sh',
       \ 'coc-snippets',
-      \ 'coc-sql',
+      \ 'coc-db',
       \ 'coc-tasks',
       \ 'coc-tsserver',
       \ 'coc-vimlsp',
