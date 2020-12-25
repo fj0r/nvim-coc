@@ -46,6 +46,8 @@ Plug 'puremourning/vimspector'
 
 Plug 'johngrib/vim-game-snake'
 
+Plug 'neovim/nvim-lspconfig'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
