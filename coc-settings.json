@@ -18,7 +18,7 @@
             ]
         },
         "sql": {
-            "command": "sql-language-server",
+            "command": "/opt/language-server/sqlls/node_modules/.bin/sql-language-server",
             "args": [
                 "up",
                 "--method",
