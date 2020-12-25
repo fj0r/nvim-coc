@@ -14,7 +14,7 @@ let g:coc_global_extensions = [
       \ 'coc-sh',
       \ 'coc-snippets',
       \ 'coc-sql',
-      \ 'coc-task',
+      \ 'coc-tasks',
       \ 'coc-tsserver',
       \ 'coc-vimlsp',
       \ 'coc-metals',
