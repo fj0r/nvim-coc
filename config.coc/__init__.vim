@@ -1,5 +1,6 @@
 let g:coc_data_home = resolve(expand(g:nvim_home.'/coc-data'))
 let g:coc_user_config = {
+    \ "languageserver": {}
   \ }
 let g:coc_global_extensions = $NVIM_PRESET == 'full'
     \ ? [
