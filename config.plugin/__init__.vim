@@ -46,7 +46,7 @@ endif
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 
-"Plug 'puremourning/vimspector'
+Plug 'puremourning/vimspector'
 
 Plug 'johngrib/vim-game-snake'
 

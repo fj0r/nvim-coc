@@ -36,3 +36,8 @@ noremap <silent><leader>xt :CocCommand explorer --preset t<CR>
 noremap <silent><leader>xc :CocCommand explorer --preset .vim<CR>
 " List all presets
 noremap <silent><leader>xl :CocList explPresets<CR>
+
+let g:coc_user_config['explorer.keyMappings.global'] = {
+    \ "e": "open:vsplit",
+    \ "E": "open",
+  \ }
