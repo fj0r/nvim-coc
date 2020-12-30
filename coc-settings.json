@@ -1,5 +1,16 @@
 {
     "languageserver": {
+        "sql": {
+            "command": "sqls",
+            "args": [
+                "-config",
+                "$HOME/.config/sqls/config.yml"
+            ],
+            "filetypes": [
+                "sql"
+            ],
+            "shell": true
+        },
         "haskell": {
             "command": "haskell-language-server-wrapper",
             "args": [

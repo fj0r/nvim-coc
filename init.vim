@@ -20,4 +20,5 @@ endfor
 for fpath in split(globpath(resolve(expand(g:nvim_home.'/config.lua')), '*.lua'), '\n')
   execute 'luafile' fpath
 endfor
+
 " vim: set fdl=0 fdm=marker:
