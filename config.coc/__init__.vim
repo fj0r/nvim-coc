@@ -15,7 +15,6 @@ let g:coc_global_extensions = $NVIM_PRESET == 'full'
         \ 'coc-rust-analyzer',
         \ 'coc-sh',
         \ 'coc-snippets',
-        \ 'coc-db',
         \ 'coc-tasks',
         \ 'coc-tsserver',
         \ 'coc-vimlsp',
