@@ -2,8 +2,9 @@ let g:coc_data_home = resolve(expand(g:nvim_home.'/coc-data'))
 let g:coc_user_config = {
     \ "languageserver": {}
   \ }
-let g:coc_global_extensions = $NVIM_PRESET == 'full'
-    \ ? [
+let g:coc_global_extensions = g:nvim_preset == 'core'
+    \ ? []
+    \ : [
         \ 'coc-explorer',
         \ 'coc-bookmark',
         \ 'coc-calc',
@@ -25,6 +26,5 @@ let g:coc_global_extensions = $NVIM_PRESET == 'full'
         \ 'coc-html',
         \ 'coc-vetur',
         \ 'coc-yank',
-        \]
-    \ : []
+        \ ]
 
