@@ -50,6 +50,8 @@ command! -nargs=0  Q :qall
 " Quickly save the current file
 noremap <leader>w :w<CR>
 command! -nargs=0  W :wall
+" reload file
+command! -nargs=0  E :e!
 
 nnoremap <expr><silent><Esc>
     \ len(filter(range(1, winnr('$')), 'getwinvar(v:val, "&ft") == "qf"'))
