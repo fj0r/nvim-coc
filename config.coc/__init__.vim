@@ -6,7 +6,7 @@ let g:coc_global_extensions = g:nvim_preset == 'core'
     \ ? []
     \ : [
         \ 'coc-explorer',
-        \ 'coc-bookmark',
+        \ 'coc-lua',
         \ 'coc-calc',
         \ 'coc-docker',
         \ 'coc-git',

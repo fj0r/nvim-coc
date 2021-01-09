@@ -10,7 +10,7 @@ local user_cfg = {
     -- typescript
     -- golang: https://github.com/golang/tools/tree/master/gopls
     -- sqlls = {},
-    sumneko_lua = {},
+    -- sumneko_lua = {},
     -- dockerls = {},
 }
 
