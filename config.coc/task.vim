@@ -1,2 +1,2 @@
-nnoremap <silent><nowait> <leader>t  :<C-u>CocList tasks<cr>
+nnoremap <silent><nowait> <leader>fq  :<C-u>CocList tasks<cr>
 
