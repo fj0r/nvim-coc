@@ -1,6 +1,9 @@
 " TODO: root-uri: workspace.rootPath
 let g:coc_explorer_global_presets = {
             \   'e': {
+            \     'width': 30,
+            \   },
+            \   'f': {
             \     'position': 'floating',
             \     'floating-position': 'left-center',
             \     'floating-width': 50,
@@ -17,6 +20,7 @@ let g:coc_explorer_global_presets = {
             \   }
             \ }
 noremap <silent><leader>e  :CocCommand explorer --preset e<CR>
+noremap <silent><leader>r  :CocCommand explorer --preset f<CR>
 noremap <silent><leader>xe :CocCommand explorer<CR>
 noremap <silent><leader>xc :CocCommand explorer --preset .vim<CR>
 noremap <silent><leader>xv :CocCommand explorer --preset v<CR>
