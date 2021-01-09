@@ -12,8 +12,11 @@ let g:coc_user_config.languageserver.lua = {
         \ "Lua": {
             \ "workspace": {
                 \ "library": {}
-                \}
-            \}
-        \}
-   \}
+            \ },
+            \ "runtime": {
+                \ "version": "LuaJIT"
+            \ }
+        \ }
+    \ }
+\ }
 

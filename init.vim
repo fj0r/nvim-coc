@@ -22,9 +22,11 @@ else
     endfor
 
     "let &rtp.=','.g:nvim_home.'/config.lua'
-    for fpath in split(globpath(resolve(expand(g:nvim_home.'/config.lua')), '*.lua'), '\n')
-        exe 'luafile' fpath
-    endfor
+    if has('nvim-0.5')
+        for fpath in split(globpath(resolve(expand(g:nvim_home.'/config.lua')), '*.lua'), '\n')
+            exe 'luafile' fpath
+        endfor
+    endif
 endif
 
 " vim: set fdl=0 fdm=marker:
