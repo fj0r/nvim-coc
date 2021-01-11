@@ -178,7 +178,7 @@ function MakeVimspectorConfiguration(adapter)
         end
     end
     fn.writefile({fn.json_encode(content)}, filename)
-    vim.cmd('e '..filename..' | Format')
+    vim.cmd('tabnew '..filename..' | Format')
 end
 
 function M:get_lang_list()
