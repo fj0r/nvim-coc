@@ -3,7 +3,7 @@
 " - Avoid using standard Vim directory names like 'plugin'
 " Make sure you use single quotes
 "
-call plug#begin(g:nvim_home . '/plugged')
+call plug#begin(g:nvim_plugged)
 
 Plug 'chr4/nginx.vim'
 

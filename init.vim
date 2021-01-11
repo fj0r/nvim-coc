@@ -1,5 +1,6 @@
 let g:nvim_home = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 let &rtp.=','.g:nvim_home
+let g:nvim_plugged = g:nvim_home . '/plugged'
 
 let g:nvim_preset = exists('$NVIM_PRESET') ? $NVIM_PRESET: 'core'
 let g:nvim_setup_plugins = exists('$NVIM_SETUP_PLUGINS')
