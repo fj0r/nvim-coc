@@ -59,7 +59,7 @@ Delve to be in your PATH, or specify the dlvToolPath launch option
 M.cfg.go = function ()
     return {
         configurations = {
-            ['go run']= {
+            ['Go Launch']= {
                 adapter = "vscode-go",
                 configuration = {
                     request = "launch",
@@ -78,7 +78,7 @@ install_gadget.py --force-enable-node
 M.cfg.js = function ()
     return {
         configurations = {
-            ['Node Run'] = {
+            ['Node Launch'] = {
                 adapter = "vscode-node",
                 configuration = {
                     request = "launch",
@@ -118,9 +118,9 @@ end
 --[[
 # install_gadget.py --force-enable-php
 zend_extension=xdebug.so
-xdebug.remote_enable=on
+xdebug.mode=debug
 xdebug.remote_handler=dbgp
-xdebug.remote_connect_back=true
+xdebug.discover_client_host=true
 xdebug.remote_port=9000
 # curl "http://localhost?XDEBUG_SESSION_START=xdebug"
 --]]
@@ -137,7 +137,7 @@ M.cfg.php = function ()
                     port = 9000,
                     stopOnEntry = false,
                     pathMappings = {
-                        ['/var/www/html'] = "${workspaceRoot}"
+                        ['/srv'] = "${workspaceRoot}"
                     }
                 }
             },
