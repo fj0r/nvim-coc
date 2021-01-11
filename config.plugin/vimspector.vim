@@ -11,6 +11,7 @@ nmap <F7>          <Plug>VimspectorStepInto
 nmap <F8>          <Plug>VimspectorStepOut
 
 nmap <F9>          <Plug>VimspectorStop
+nmap <Leader><F9>  :VimspectorReset<CR>
 nmap <F10>         <Plug>VimspectorRestart
 nmap <Leader><F10> <Plug>VimspectorPause
 

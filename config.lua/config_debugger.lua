@@ -4,7 +4,7 @@ local M = {
 }
 
 --[[
-./install_gadget.py --force-enable-rust or :VimspectorInstall CodeLLDB
+./install_gadget.py --enable-rust or :VimspectorInstall CodeLLDB
 --]]
 M.cfg.rust = function ()
     return {
