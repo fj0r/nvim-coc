@@ -11,6 +11,5 @@ vimlsp
 sh
 pyright
 rust-analyzer
-docker
 go
 highlight
