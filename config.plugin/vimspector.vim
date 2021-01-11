@@ -15,3 +15,15 @@ nmap <Leader><F9>  <Plug>VimspectorPause
 nmap <F10>         <Plug>VimspectorStop
 nmap <Leader><F10> :VimspectorReset<CR>
 
+sign define vimspectorBP text=o          texthl=WarningMsg
+sign define vimspectorBPCond text=o?     texthl=WarningMsg
+sign define vimspectorBPDisabled text=o! texthl=LineNr
+sign define vimspectorPC text=\ >        texthl=MatchParen
+sign define vimspectorPCBP text=o>       texthl=MatchParen
+
+let g:vimspector_sign_priority = {
+  \    'vimspectorBP':         3,
+  \    'vimspectorBPCond':     2,
+  \    'vimspectorBPDisabled': 1,
+  \    'vimspectorPC':         999,
+  \ }
