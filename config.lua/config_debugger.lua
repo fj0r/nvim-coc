@@ -1,12 +1,22 @@
 local fn = vim.fn
 local M = {
-    cfg = {}
+    config = {}
+}
+
+M.common_config = {
+    breakpoints = {
+        exception = {
+            caught = "",
+            raised = "",
+            uncaught = "Y"
+        }
+    }
 }
 
 --[[
 ./install_gadget.py --enable-rust or :VimspectorInstall CodeLLDB
 --]]
-M.cfg.rust = function ()
+M.config.rust = function ()
     return {
         configurations = {
             ['Rust Launch'] = {
@@ -23,7 +33,7 @@ end
 --[[
 install_gadget.py --enable-python
 --]]
-M.cfg.py = function ()
+M.config.py = function ()
     return {
         configurations = {
             ['Python Launch'] = {
@@ -56,7 +66,7 @@ install_gadget.py --enable-go or :VimspectorInstall vscode-go
 Delve installed, e.g. go get -u github.com/go-delve/delve/cmd/dlv
 Delve to be in your PATH, or specify the dlvToolPath launch option
 --]]
-M.cfg.go = function ()
+M.config.go = function ()
     return {
         configurations = {
             ['Go Launch']= {
@@ -75,7 +85,7 @@ end
 --[[
 install_gadget.py --force-enable-node
 --]]
-M.cfg.js = function ()
+M.config.js = function ()
     return {
         configurations = {
             ['Node Launch'] = {
@@ -96,7 +106,7 @@ end
 --[[
 install_gadget.py --force-enable-java
 --]]
-M.cfg.java = function ()
+M.config.java = function ()
     return {
         configurations = {
             ['Java Attach'] = {
@@ -125,7 +135,7 @@ xdebug.remote_port=9000
 # curl "http://localhost?XDEBUG_SESSION_START=xdebug"
 --]]
 --
-M.cfg.php = function ()
+M.config.php = function ()
     return {
         configurations = {
             ['Listen for XDebug'] = {
@@ -157,12 +167,17 @@ M.cfg.php = function ()
 end
 
 function M:gen_vimspector_configuration(adapter)
-    return self.cfg[adapter]()
+    return self.config[adapter]()
 end
 
 function MakeVimspectorConfiguration(adapter)
     local origin = {}
     local content = M:gen_vimspector_configuration(adapter)
+    for _, j in pairs(content.configurations) do
+        for k, v in pairs(M.common_config) do
+            j[k] = v
+        end
+    end
     local filename = fn.getcwd() .. '/.vimspector.json'
     if fn.filereadable(filename) ~= 0 then
         local old = fn.readfile(filename)
@@ -183,7 +198,7 @@ end
 
 function M:get_lang_list()
     local r = {}
-    for k, _ in pairs(self.cfg) do
+    for k, _ in pairs(self.config) do
         table.insert(r, k)
     end
     table.sort(r)
