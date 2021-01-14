@@ -58,7 +58,6 @@ nnoremap <silent><leader>p :set paste!<CR>
 nnoremap M :marks<CR>
 " Quickly close the current window
 nnoremap <leader>q :q<CR>
-command! -nargs=0  Q :qall
 " Quickly save the current file
 nnoremap <leader>w :w<CR>
 command! -nargs=0  W :wall
