@@ -13,6 +13,44 @@ M.common_config = {
     }
 }
 
+M.config.haskell = function ()
+    return {
+      adapters = {
+        hda = {
+          name = "haskell-debug-adapter",
+          command = {
+            "haskell-debug-adapter",
+            "--hackage-version=0.0.31.0"
+          }
+        }
+      },
+      configurations = {
+        ['haskell-debug-adapter: Launch'] = {
+          adapter = "hda",
+          configuration = {
+            type = "ghc",
+            request = "launch",
+            name = "haskell-debug-adapter",
+            internalConsoleOptions = "openOnSessionStart",
+            workspace = "${workspaceRoot}",
+            startup = "${workspaceRoot}/test/Spec.hs",
+            startupFunc = "",
+            startupArgs = "",
+            stopOnEntry = true,
+            mainArgs = "",
+            ghciPrompt = "H>>= ",
+            ghciInitialPrompt = "Prelude>",
+            ghciCmd = "stack ghci --test --no-load --no-build --main-is TARGET --ghci-options -fprint-evld-with-show",
+            ghciEnv = {},
+            logFile = "${workspaceRoot}/hdx4vim.log",
+            logLevel = "WARNING",
+            forceInspect = false
+          }
+        }
+      }
+    }
+end
+
 --[[
 ./install_gadget.py --enable-rust or :VimspectorInstall CodeLLDB
 --]]
@@ -186,9 +224,12 @@ function MakeVimspectorConfiguration(adapter)
             ostr = ostr .. s
         end
         origin = fn.json_decode(ostr)
-        if origin.configurations then
-            for k, v in pairs(origin.configurations) do
-                content.configurations[k] = v
+        for i, j in pairs(origin) do
+            for k, v in pairs(j) do
+                if not content[i] then
+                    content[i] = {}
+                end
+                content[i][k] = v
             end
         end
     end
