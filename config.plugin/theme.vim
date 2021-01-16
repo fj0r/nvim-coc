@@ -1,5 +1,8 @@
 set termguicolors
 
+"material mix original
+let g:gruvbox_material_palette = "material"
+"hard medium soft
 let g:gruvbox_material_background = "hard"
 let g:gruvbox_material_sign_column_background = "none"
 let g:gruvbox_material_transparent_background = 1
