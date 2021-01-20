@@ -6,6 +6,7 @@
 call plug#begin(g:nvim_plugged)
 
 Plug 'chr4/nginx.vim'
+Plug 'keith/swift.vim'
 
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
