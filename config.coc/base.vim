@@ -1,20 +1,20 @@
-" if hidden is not set, TextEdit might fail.
+" TextEdit might fail if hidden is not set.
 set hidden
 
-" Some servers have issues with backup files, see #649
+" Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
 
-" Better display for messages
+" Give more space for displaying messages.
 """set cmdheight=2
 
-" You will have bad experience for diagnostic messages when it's default 4000.
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
 set updatetime=300
 
-" don't give |ins-completion-menu| messages.
+" Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-" always show signcolumns
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
@@ -52,8 +52,8 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [d <Plug>(coc-diagnostic-prev)
-nmap <silent> ]d <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -93,7 +93,7 @@ augroup mygroup
 augroup end
 
 " Applying codeAction to the selected region.
-" Example: `,aap` for current paragraph
+" Example: `<leader>aap` for current paragraph
 xmap ,a  <Plug>(coc-codeaction-selected)
 nmap ,a  <Plug>(coc-codeaction-selected)
 
@@ -143,9 +143,8 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
-nnoremap <silent><nowait> ,m  :<C-u>CocList<cr>
 " Show all diagnostics.
-nnoremap <silent><nowait> ,d  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> ,a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent><nowait> ,e  :<C-u>CocList extensions<cr>
 " Show commands.
@@ -160,4 +159,3 @@ nnoremap <silent><nowait> ,j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> ,k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> ,p  :<C-u>CocListResume<CR>
-
