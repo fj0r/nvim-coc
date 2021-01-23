@@ -11,8 +11,9 @@ colorscheme gruvbox-material
 
 hi Visual guibg=#003333
 
-set cursorline " 突出显示当前行
+"set cursorline " 突出显示当前行
 "set cursorcolumn " 突出显示当前列
+set guicursor+=a:blinkon0
 "autocmd InsertLeave,WinEnter * set cursorcolumn
 "autocmd InsertEnter,WinLeave * set nocursorcolumn
 
