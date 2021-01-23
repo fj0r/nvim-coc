@@ -34,6 +34,7 @@ if $NVIM_EXPLORER_FIXED
   let g:coc_user_config['explorer.toggle'] = v:false
 else
   noremap <silent><leader>e  :CocCommand explorer --preset f<CR>
-  "TODO: [20210109] 显示 border 时渲染会出问题
-  let g:coc_user_config['explorer.floating.border.enable'] = v:false
+  if &ambiwidth != 'single'
+    let g:coc_user_config['explorer.floating.border.enable'] = v:false
+  endif
 endif
