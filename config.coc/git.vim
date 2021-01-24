@@ -7,7 +7,7 @@ nmap ]c <Plug>(coc-git-nextconflict)
 " show chunk diff at current position
 nmap \i <Plug>(coc-git-chunkinfo)
 " show commit contains current position
-nmap \c <Plug>(coc-git-commit)
+nmap \g <Plug>(coc-git-commit)
 " create text object for git chunks
 omap ig <Plug>(coc-git-chunk-inner)
 xmap ig <Plug>(coc-git-chunk-inner)
