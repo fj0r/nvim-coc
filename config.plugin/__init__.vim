@@ -51,10 +51,10 @@ Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'thaerkh/vim-workspace'
 
-if g:nvim_preset == 'core'
-  Plug 'Yggdroot/LeaderF'
-else
+if executable('gcc')
   Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension'  }
+else
+  Plug 'Yggdroot/LeaderF'
 endif
 
 Plug 'puremourning/vimspector'
