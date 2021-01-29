@@ -45,6 +45,8 @@ Plug 'machakann/vim-swap'
 "Plug 'hrsh7th/vim-vsnip-integ'
 
 Plug 'tpope/vim-fugitive'
+"Plug 'mbbill/undotree'
+Plug 'simnalamburt/vim-mundo'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'thaerkh/vim-workspace'
