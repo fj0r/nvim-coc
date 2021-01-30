@@ -1,3 +1,6 @@
+let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
+let g:Lf_WorkingDirectoryMode = 'Ac'
+
 let g:Lf_ShowDevIcons = 0
 let g:Lf_HideHelp = 1
 let g:Lf_UseCache = 0
@@ -17,7 +20,7 @@ noremap <leader>m :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
 " asyncTasks
 noremap <leader>t :Leaderf --nowrap task<CR>
 " --pcre2 for look-behind
-noremap <leader>g :<C-U><C-R>=printf("Leaderf rg --pcre2 '(TODO\|FIXME\|NOTE)(?=:)'")<CR><CR>
+noremap <leader>g :<C-U><C-R>=printf("Leaderf rg --wd-mode=Ac --pcre2 '(TODO\|FIXME\|NOTE)(?=:)'")<CR><CR>
 
 "noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
 noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
@@ -30,7 +33,8 @@ let g:Lf_CommandMap = {
     \ '<C-v>': ['<C-]>'],
     \ }
 
-noremap <leader>r :Leaderf rg<CR>
+noremap <leader>r :Leaderf rg --wd-mode=Ac<CR>
+noremap <leader>R :Leaderf rg --wd-mode=Ac --hidden<CR>
 noremap go :<C-U>Leaderf rg --recall<CR>
 noremap g<C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR>
 noremap g<C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
