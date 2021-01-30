@@ -28,5 +28,6 @@ let g:vimspector_sign_priority = {
   \    'vimspectorBPCond':     999,
   \    'vimspectorBPDisabled': 999,
   \    'vimspectorPC':         999,
+  \    'vimspectorPCBP':       999,
   \ }
 
