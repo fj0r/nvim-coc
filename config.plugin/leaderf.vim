@@ -33,6 +33,23 @@ let g:Lf_CommandMap = {
     \ '<C-v>': ['<C-]>'],
     \ }
 
+let g:Lf_NormalMap = {
+    \ "_":        [["<C-j>", "j"],
+    \              ["<C-k>", "k"]],
+	\ "Rg":       [["<ESC>", ':exec g:Lf_py "rgExplManager.quit()"<CR>'],
+    \              ["s", ":exec g:Lf_py \"rgExplManager.accept('h')\"<CR>"]],
+	\ "File":     [["<ESC>", ':exec g:Lf_py "fileExplManager.quit()"<CR>'],
+	\              ["s", ":exec g:Lf_py \"fileExplManager.accept('h')\"<CR>"]],
+	\ "Buffer":   [["<ESC>", ':exec g:Lf_py "bufExplManager.quit()"<CR>'],
+	\              ["s", ":exec g:Lf_py \"bufExplManager.accept('h')\"<CR>"]],
+	\ "Mru":      [["<ESC>", ':exec g:Lf_py "mruExplManager.quit()"<CR>'],
+	\              ["s", ":exec g:Lf_py \"mruExplManager.accept('h')\"<CR>"]],
+	\ "Tag":      [["<ESC>", ':exec g:Lf_py "tagExplManager.quit()"<CR>'],
+	\              ["s", ":exec g:Lf_py \"tagExplManager.accept('h')\"<CR>"]],
+	\ "Function": [["<ESC>", ':exec g:Lf_py "functionExplManager.quit()"<CR>'],
+	\              ["s", ":exec g:Lf_py \"functionExplManager.accept('h')\"<CR>"]],
+    \ }
+
 noremap <leader>r :Leaderf rg --wd-mode=Ac<CR>
 noremap <leader>R :Leaderf rg --wd-mode=Ac --hidden<CR>
 noremap go :<C-U>Leaderf rg --recall<CR>
