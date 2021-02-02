@@ -53,8 +53,8 @@ let g:Lf_NormalMap = {
 noremap <leader>r :Leaderf rg --wd-mode=Ac<CR>
 noremap <leader>R :Leaderf rg --wd-mode=Ac --hidden<CR>
 noremap go :<C-U>Leaderf rg --recall<CR>
-noremap g<C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR>
-noremap g<C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
+noremap gb :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR>
+noremap gf :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
 " search visually selected text literally
 xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
 
