@@ -1,6 +1,7 @@
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode = 'Ac'
 
+let g:Lf_ShowHidden= 1
 let g:Lf_ShowDevIcons = 0
 let g:Lf_HideHelp = 1
 let g:Lf_UseCache = 0
