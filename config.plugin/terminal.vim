@@ -5,7 +5,7 @@ let g:terminal_close = 1
 let g:terminal_list = 0
 
 if !$VIM_N_DUAL_ESC
-  tnoremap jk <c-\><c-n>
+  "tnoremap jk <c-\><c-n>
   tnoremap kj <c-\><c-n>
   autocmd TermEnter * set timeoutlen=150
   autocmd TermLeave * set timeoutlen=1000
