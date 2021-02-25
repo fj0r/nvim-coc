@@ -93,12 +93,9 @@ augroup mygroup
 augroup end
 
 " Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
 xmap \a  <Plug>(coc-codeaction-selected)
-nmap \a  <Plug>(coc-codeaction-selected)
-
 " Remap keys for applying codeAction to the current buffer.
-nmap \ac  <Plug>(coc-codeaction)
+nmap \a   <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap \qf  <Plug>(coc-fix-current)
 
@@ -144,7 +141,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> \a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> \d  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent><nowait> \e  :<C-u>CocList extensions<cr>
 " Show commands.
