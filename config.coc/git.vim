@@ -2,12 +2,12 @@
 nmap [g <Plug>(coc-git-prevchunk)
 nmap ]g <Plug>(coc-git-nextchunk)
 " navigate conflicts of current buffer
-nmap [c <Plug>(coc-git-prevconflict)
-nmap ]c <Plug>(coc-git-nextconflict)
+nmap [x <Plug>(coc-git-prevconflict)
+nmap ]x <Plug>(coc-git-nextconflict)
 " show chunk diff at current position
-nmap \i <Plug>(coc-git-chunkinfo)
+nmap [i <Plug>(coc-git-chunkinfo)
 " show commit contains current position
-nmap \g <Plug>(coc-git-commit)
+nmap [c <Plug>(coc-git-commit)
 " create text object for git chunks
 omap ig <Plug>(coc-git-chunk-inner)
 xmap ig <Plug>(coc-git-chunk-inner)
