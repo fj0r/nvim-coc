@@ -7,9 +7,9 @@ call plug#begin(g:nvim_plugged)
 
 Plug 'chr4/nginx.vim'
 "Plug 'keith/swift.vim'
-if g:nvim_preset != 'core'
-    Plug 'rescript-lang/vim-rescript'
-endif
+"if g:nvim_preset != 'core'
+"    Plug 'rescript-lang/vim-rescript'
+"endif
 
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
