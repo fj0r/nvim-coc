@@ -11,13 +11,15 @@ Plug 'chr4/nginx.vim'
 "    Plug 'rescript-lang/vim-rescript'
 "endif
 
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-"Plug 'ompugao/vim-airline-datetime'
-Plug 'itchyny/lightline.vim'
-Plug 'niklaas/lightline-gitdiff'
-"Plug 'mhinz/vim-startify'
 Plug 'sainnhe/gruvbox-material'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"Plug 'bling/vim-bufferline'
+"Plug 'ompugao/vim-airline-datetime'
+"Plug 'itchyny/lightline.vim'
+"Plug 'niklaas/lightline-gitdiff'
+"Plug 'mhinz/vim-startify'
 Plug 't9md/vim-choosewin'
 
 Plug 'skywind3000/asynctasks.vim'
