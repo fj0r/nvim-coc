@@ -1,6 +1,13 @@
 if g:nvim_preset == 'core'
 	let g:airline_extensions = [ "branch" ]
 	let g:airline_highlighting_cache = 1
+elseif g:nvim_preset == 'x'
+	let g:airline_extensions = [
+		\"branch", "coc", "fugitiveline",
+		\"hunks", "keymap",
+		\"mundo", "quickfix", "term",
+		\"whitespace", "wordcount"
+		\]
 endif
 
 " base16_gruvbox_dark_hard badwolf
