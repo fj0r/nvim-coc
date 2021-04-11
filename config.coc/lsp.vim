@@ -15,3 +15,6 @@ let g:coc_user_config.languageserver.haskell = {
 \ }
 " }}}
 
+" yaml {{{
+let g:coc_user_config['yaml.schemaStore.enable'] = v:true
+" }}}
