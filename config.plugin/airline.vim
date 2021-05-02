@@ -1,10 +1,9 @@
 if g:nvim_preset == 'core'
 	let g:airline_extensions = [ "branch" ]
 	let g:airline_highlighting_cache = 1
-elseif g:nvim_preset == 'x'
+else
 	let g:airline_extensions = [
-		\"branch", "coc", "fugitiveline",
-		\"hunks", "keymap",
+		\"branch", "coc", "fugitiveline", "keymap",
 		\"mundo", "quickfix", "term",
 		\"whitespace", "wordcount"
 		\]
